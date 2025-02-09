@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Game Selection Page -->
+    <div id="gameSelection">
+        <h1 class="title">HACK ANLYSER</h1>
+        <div class="tiles">
+            <div class="tile" onclick="startGame('Big Mumbai', 'big-mumbai.jpg')">
+                <img src="bigmumbaii.png" alt="Big Mumbai">
+                <p>Big Mumbai</p>
+            </div>
+            <div class="tile" onclick="startGame('Goa Game', 'goa-game.jpg')">
+                <img src="goa.png" alt="Goa Game">
+                <p>Goa Game</p>
+            </div>
+            <div class="tile" onclick="startGame('Daman', 'daman.jpg')">
+                <img src="daman.png" alt="Daman">
+                <p>Daman</p>
+            </div>
+            <div class="tile" onclick="startGame('Big Daddy Game', 'big-daddy.jpg')">
+                <img src="bdg.jpeg" alt="Big Daddy Game">
+                <p>Big Daddy Game</p>
+            </div>
+            <div class="tile" onclick="startGame('Sikkim', 'sikkim.jpg')">
+                <img src="sikkim.jpeg" alt="Sikkim">
+                <p>Sikkim</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Play Page -->
+    <div id="gamePlay" class="hidden">
+        <h1 id="gameTitle"></h1>
+        <img id="gameImage" src="" alt="Game Image">
+        <h2>Enter Last 4 Results</h2>
+
+        <div class="input-section">
+            <input type="text" id="input1" readonly>
+            <input type="text" id="input2" readonly>
+            <input type="text" id="input3" readonly>
+            <input type="text" id="input4" readonly>
+        </div>
+
+        <div class="buttons">
+            <button onclick="setInput('Small')">Small</button>
+            <button onclick="setInput('Big')">Big</button>
+        </div>
+
+        <button id="goBtn" onclick="predictResult()">Go</button>
+        <h3 id="predictedResult"></h3>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
